@@ -5,7 +5,10 @@ import Offers from "./pages/Offers";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
 import SignIn from "./pages/Signin";
+import EditListing from "./pages/EditListing";
 import SignUp from "./pages/Signup";
+import Listing from "./pages/Listing";
+import Contact from "./pages/Contact";
 import CreateListing from "./pages/CreateListing";
 import Category from "./pages/Category";
 import ForgotPassword from "./pages/ForgotPassword";
@@ -20,6 +23,9 @@ function App() {
           <Route path="/" element={<Explore />} />
           <Route path="/offers" element={<Offers />} />
           <Route path="/create-listing" element={<CreateListing />} />
+          <Route path="/edit-listing/:listingId" element={<EditListing />} />
+          <Route path="/category/:categoryName/:listingId" element={<Listing />} />
+          <Route path="/contact/:landlordId" element={<Contact />} />
           <Route path="/category/:categoryName" element={<Category />} />
           <Route path="/profile" element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
